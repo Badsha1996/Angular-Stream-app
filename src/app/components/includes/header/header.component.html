@@ -1,0 +1,77 @@
+<!-- *********** NAVIGATION BAR ************ -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" [routerLink]="['/']"><span style="font-weight: 900; font-size: larger;font-family: 'Times New Roman', Times, serif;">GOOD</span> Films</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample04">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Netflix</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Itune</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Amazon Prime</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Hulu Plus</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Netflix</a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Services</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown04">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </ul>
+      <div >
+        <input type="text" class="form-control" placeholder="Search for movies..." 
+            name="searchStr" >
+    </div>
+    <div>
+      <span><br></span>
+    </div>
+    <span class="input-group-btn">
+      <button class="btn btn-primary btnDesign" type="button">Go</button>
+  </span>
+    </div>
+    <span class="sidebar-nav-btn"  pButton icon="pi pi-plus" label="Show" (click)="leftSidebar = true"><img src="assets/images/menu.svg"></span>
+  </nav>
+<!--ends here-->
+
+
+<p-sidebar [(visible)]="leftSidebar" position="left" [baseZIndex]="5000">
+    <div class="sidebarNav">
+        <div class="menu-container">
+            <div class="sidebarMenu">
+                <img src="assets/images/home.svg">
+                <a class="sidebar-nav-link" [routerLink]="['/']" routerLinkActive="router-link-active">Home
+                    <span class="sr-only">(current)</span>
+                </a>
+            </div>
+            <div class="sidebarMenu">
+                <img src="assets/images/videos.svg">
+                <a class="sidebar-nav-link" [routerLink]="['/movies']" routerLinkActive="router-link-active">Movies</a>
+            </div>
+            <div class="sidebarMenu">
+                <img src="assets/images/tv.svg">
+                <a class="sidebar-nav-link" [routerLink]="['/tv']" routerLinkActive="router-link-active">TV Shows</a>
+            </div>
+            <div class="sidebarMenu genre_">
+                <img src="assets/images/tripod.svg">
+                <a class="sidebar-nav-link" [routerLink]="['/genres']" routerLinkActive="router-link-active">Genres</a>
+            </div>
+        </div>
+    </div>
+</p-sidebar>
